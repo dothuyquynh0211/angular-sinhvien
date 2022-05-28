@@ -1,0 +1,75 @@
+<div>
+  <button mat-raised-button color="primary" (click)="addStudent()">
+    <mat-icon>add_box</mat-icon>
+    Thêm sinh viên
+  </button>
+  <table id="customers" >
+    <tr>
+
+      <th>Id</th>
+      <th>
+        Mã sinh viên
+        <mat-icon style="cursor: pointer;" (click)="sortByCode('down')">
+          arrow_downward
+        </mat-icon>
+        <mat-icon style="cursor: pointer;" (click)="sortByCode('up')">
+          arrow_upward
+        </mat-icon>
+      </th>
+      <th>Ảnh</th>
+      <th>Họ</th>
+      <th>Tên</th>
+      <th>Ngày sinh</th>
+      <th>Giới tính</th>
+      <th>Email</th>
+      <th>Điện thoại</th>
+
+      <th>Hành động</th>
+    </tr>
+    <tr *ngFor="let student of students">
+
+      <td>{{ student?.id }}</td>
+      <td>{{ student?.code }}</td>
+      <td >
+        <img class="img"
+          *ngIf="student?.picture"
+          src="{{ student?.picture }}"
+          height="50"
+        />
+      </td>
+      <td>{{ student?.lastName }}</td>
+      <td>{{ student?.firstName }}</td>
+      <td>{{ student?.dob }}</td>
+      <td>{{ student?.gender == 'M' ? "Nam" :'Nữ' }}</td>
+      <td>{{ student?.email }}</td>
+      <td>{{ student?.phone }}</td>
+      <td>
+        <mat-icon
+          style="cursor: pointer; color:red"
+          title="Nhấn vào để xóa"
+          (click)="deleteStudent(student.id)"
+        >
+          clear
+        </mat-icon>
+        &nbsp;
+        <mat-icon
+          style="cursor: pointer; color:blue"
+          title="Nhấn vào để sửa"
+          (click)="editStudent(student.id)"
+        >
+          create
+        </mat-icon>
+        &nbsp;
+        <mat-icon
+          style="cursor: pointer; color:black"
+          title="Nhấn vào để xem chi tiết"
+          (click)="detailStudent(student.id)"
+        >
+        visibility
+        </mat-icon>
+
+      </td>
+
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,94 @@
+{
+  "students": [
+    {
+      "code": "BKD01",
+      "gender": "F",
+      "firstName": "Thùy Linh",
+      "lastName": "Trần",
+      "dob": "2001-03-02",
+      "email": "linh@gmail.com",
+      "phone": "0374165568",
+      "picture": "https://luv.vn/wp-content/uploads/2021/10/gai-xinh-toc-ngan-47.jpg",
+      "id": 1
+    },
+    {
+      "code": "BKD02",
+      "gender": "M",
+      "firstName": "Nam",
+      "lastName": "Nguyễn ",
+      "dob": "2001-09-14",
+      "email": "nam@gmail.com",
+      "phone": "0364758927",
+      "picture": "https://img5.thuthuatphanmem.vn/uploads/2022/01/18/anh-trai-dau-nam-2k4-dep_080006003.jpg",
+      "id": 2
+    },
+    {
+      "code": "BKD03",
+      "gender": "F",
+      "firstName": "Thùy",
+      "lastName": "Nguyễn",
+      "dob": "2002-12-08",
+      "email": "thuy@gmail.com",
+      "phone": "0367897567",
+      "picture": "https://haycafe.vn/wp-content/uploads/2022/02/Anh-gai-xinh-cap-2-3.jpg",
+      "id": 3
+    },
+    {
+      "code": "BKD04",
+      "gender": "",
+      "firstName": "Khánh",
+      "lastName": "Vũ",
+      "dob": "2002-02-02",
+      "email": "khanh@gmail.com",
+      "phone": "0345667789",
+      "picture": "https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-trai-cute.jpeg",
+      "id": 4
+    },
+    {
+      "code": "bkd05",
+      "gender": "M",
+      "firstName": "Huy",
+      "lastName": "Lâm",
+      "dob": "1999-07-12",
+      "email": "huy@gmail.com",
+      "phone": "0345667787",
+      "picture": "https://luv.vn/wp-content/uploads/2021/07/hinh-anh-trai-de-thuong-14.jpg",
+      "id": 5
+    },
+    {
+      "code": "BKD07",
+      "gender": "F",
+      "firstName": "Ngọc Lan",
+      "lastName": "Đặng 1",
+      "dob": "2001-06-23",
+      "email": "lan@gmail.com",
+      "phone": "0345667780",
+      "picture": "https://cdn.24h.com.vn/upload/1-2022/images/2022-03-13/anh-1-1647162766-197-width650height741.jpg",
+      "id": 7
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "testing",
+      "author": "author testing",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "Huy Nguyễn",
+    "age": 20,
+    "gender": "male"
+  }
+}

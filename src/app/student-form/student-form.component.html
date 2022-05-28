@@ -1,0 +1,60 @@
+<div class="container">
+  <h1 *ngIf="id === 0">Nhập sinh viên </h1>
+  <h1 *ngIf="id === 1" >Sửa thông tin </h1>
+
+  <form [formGroup]="studentForm">
+    <mat-form-field class="form-header">
+      <mat-label>Mã sinh viên</mat-label>
+      <input matInput placeholder="" formControlName="code" require />
+    </mat-form-field>
+    <mat-form-field class="form-header">
+      <mat-label>Họ</mat-label>
+      <input matInput placeholder="" formControlName="lastName" require />
+    </mat-form-field>
+    <mat-form-field class="form-header">
+      <mat-label>Tên</mat-label>
+      <input matInput placeholder="" formControlName="firstName" require />
+    </mat-form-field>
+    <mat-form-field class="form-header">
+      <mat-label>Ngày tháng năm sinh</mat-label>
+      <input matInput placeholder=""  type="date" formControlName="dob" require />
+    </mat-form-field>
+    <div class="form-header">
+      <mat-radio-group formControlName="gender" >
+        <mat-radio-button value="M" [checked]='true'>Nam</mat-radio-button>
+        <mat-radio-button value="F">Nữ</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <mat-form-field class="form-header">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="" formControlName="email" require />
+    </mat-form-field>
+    <mat-form-field class="form-header">
+      <mat-label>Điện thoại</mat-label>
+      <input matInput placeholder="" formControlName="phone" require />
+    </mat-form-field>
+    <mat-form-field class="form-header">
+      <mat-label>Ảnh</mat-label>
+      <input matInput placeholder="" formControlName="picture" require />
+    </mat-form-field>
+    <br />
+    <button
+      type="submit"
+      class="btn btn-info"
+      [disabled]="!studentForm.valid"
+      (click)="saveAndGotoList()"
+    >
+      Lưu và trở về danh sách
+    </button>
+    &nbsp;
+    <button
+      type="submit"
+      class="btn btn-info"
+      [disabled]="!studentForm.valid"
+      (click)="save()"
+    >
+      Lưu <span *ngIf="id === 0">và nhập mới</span>
+    </button>
+    &nbsp;
+  </form>
+</div>

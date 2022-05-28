@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Chi tiết sinh viên </h1>
+  <div class="content"  *ngIf="students">
+    <img class="img"
+          *ngIf="students.picture"
+          src="{{ students.picture }}"
+        />
+
+    <div class='info'>
+      <p>Mã sinh viên : {{students.code}} </p>
+      <p>Tên sinh viên : {{students.lastName}} {{students.firstName}}</p>
+      <p>Ngày sinh :{{students.dob}}</p>
+      <p>Email :{{students.email}}</p>
+      <p>Số điện thoại : {{students.phone}}</p>
+    </div>
+  </div >
+</div>
